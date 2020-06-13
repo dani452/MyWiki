@@ -5,8 +5,11 @@
 {% block body %}
 
 <div>
-<h1>MyWiki</p>
-<p>un paragraphe a transformer en formulaire</p>
+<h1>MyWiki</h1>
+    <form action="{{ path('search') }}" class="inputHome" method="post">
+        <input class="form-control" type="text" name="search" placeholder="Entrez votre recherche">
+        <button type="submit">&#x2794;</button>
+    </form>
 </div>
 
 {% endblock %}
