@@ -25,8 +25,9 @@ class HomeController extends AbstractController
     */
     public function search(Request $request){
 
+    if($request->request->get('email') == ""){
         $search = $request->request->get('search');
-        if($search){
+        if($search != ""){
             $api = "https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&titles=".ucwords($search)."&redirects=true";
             $api = str_replace(' ','%20',$api);
 
@@ -61,10 +62,9 @@ class HomeController extends AbstractController
                 'image'   => $image,
                 'title'   => $title
             ]);
-        } else {
-            echo 'No results found';
         }
             return $this->render('home.html.twig');
+    }
     }
 }
       
