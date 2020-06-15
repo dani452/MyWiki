@@ -1,0 +1,12 @@
+.article_title{
+    font-family: "Palatino Linotype P";
+}
+.image_article{
+    max-width: 100%;
+    height: auto;
+}
+.content_article{
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}

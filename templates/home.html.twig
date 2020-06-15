@@ -1,14 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home MyWiki{% endblock %}
+{% block title %}Lewiki{% endblock %}
 
 {% block body %}
 
 <div>
-<h1>MyWiki</h1>
-    <form action="{{ path('search') }}" class="inputHome" method="post">
-        <input class="form-control" type="text" name="search" placeholder="Entrez votre recherche">
-        <button type="submit">&#x2794;</button>
+<h1 id="home_title">
+  <span class="blue">L</span><span class="red">e</span><span class="yellow">w</span><span class="blue">i</span><span class="green">k</span><span class="red">i</span>
+</h1>
+</h1>
+    <form action="{{ path('search') }}" class="bar" method="post">
+    <div class="fa fa-search"></div>
+        <input class="search_bar" type="text" name="search">
     </form>
 </div>
 

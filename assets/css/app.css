@@ -1,5 +1,7 @@
 @import "home";
+@import "article";
 
 body {
-    background-color: lightgray;
+    font-family: sans-serif;
+    background-color: #FFFFFF;
 }

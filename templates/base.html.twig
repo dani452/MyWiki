@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="description" content="L'encyclopédie gratuite">
+        <meta name="keywords" content="Lewiki, Encyclopédie, médiawiki">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>{% block title %}MyWiki{% endblock %}</title>
+        <link href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}Lewiki{% endblock %}</title>
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
