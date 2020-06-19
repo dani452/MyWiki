@@ -73,7 +73,7 @@ class HomeController extends AbstractController
     */
     public function search(Request $request){
 
-        if($request->request->get('email') == ""){
+        if(($request->request->get('email') == "") && ($request->get('search') !== null)){
             $search = $request->request->get('search');
             if($search != ""){
                 $api = "https://fr.wikipedia.org/w/api.php?action=parse&format=json&page=".ucwords($search)."&prop=text&formatversion=2";
