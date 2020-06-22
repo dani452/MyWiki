@@ -10,6 +10,7 @@
     font-size: 18px;
     line-height: 1.6;
 }
-.not_display {
-    display : none;
+.imgThumb {
+    width: 200%;
+    height: auto;
 }

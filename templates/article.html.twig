@@ -5,7 +5,7 @@
 {% block body %}
 
 <div>
-    <h1 class="article_title">LeWiki</h1>
+    <h1 class="article_title">Lewiki</h1>
 
     {# <img src="{{ image|raw }}" alt="La photo de l'article" class="image_article"> #}
     <br>
@@ -13,5 +13,8 @@
     {{ content|raw }}
     </div>
 </div>
-
+<script>
+document.querySelector('.mw-parser-output').style.display = "flex";
+document.querySelector('.mw-parser-output').style.flexDirection = "column";
+</script>
 {% endblock %}
