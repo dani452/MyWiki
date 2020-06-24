@@ -5,33 +5,17 @@
 {% block body %}
 
 <div>
-    <h1 class="article_title">Lewiki</h1>
-
-    {# <img src="{{ image|raw }}" alt="La photo de l'article" class="image_article"> #}
-    <br>
-    <div class="content_article">
-    {{ content|raw }}
-    </div>
+    <h1 class="article_title"><span class="blue">L</span><span class="red">e</span><span class="yellow">w</span><span class="blue">i</span><span class="green">k</span><span class="red">i</span></h1>
+      <div class="content_article">
+        <a id="button"></a>
+        <a href="{{ path('home') }}" class="btn btn-info offset-11" role="button">Retour</a>
+        {{ content|raw }}
+      </div>
 </div>
-<script>
-document.querySelector('.mw-parser-output').style.display = "flex";
-document.querySelector('.mw-parser-output').style.flexDirection = "column";
 
-var titles = document.querySelectorAll('h2');
-var i;
-for (i =0; i< titles.length; i++){
-    titles[i].style.textAlign = "center";
-}
+  {% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('article') }}
+  {% endblock %}
 
-var image_article = document.getElementsByClassName("thumbimage");
-var i;
-for (i = 0; i < image_article.length; i++) {
-  image_article[i].style.width = "200%";
-  image_article[i].style.height = "auto";
-}
-
-let h1 = document.querySelector('h1');
-h1.style.textAlign = "center";
-h1.style.fontSize = "3em";
-</script>
 {% endblock %}
