@@ -1,4 +1,11 @@
 $('.mw-editsection').css("display", "none");
+
+$(document).ready(function() {
+  $(".infobox_v2 a").removeAttr("href");
+  $("p a").removeAttr("href");
+  $(".bandeau-cell a").removeAttr("href");
+});
+
 document.querySelector('.mw-parser-output').style.display = "flex";
 document.querySelector('.mw-parser-output').style.flexDirection = "column";
 document.querySelector('.mw-parser-output').style.marginTop = "50px";
