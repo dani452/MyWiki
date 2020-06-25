@@ -1,17 +1,37 @@
 .article_title{
     font-family: "Palatino Linotype P";
+    text-align: center;
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: -2500px;
+    transition: transform 1s ease;
 }
-.image_article{
-    max-width: 100%;
-    height: auto;
-}
+
 .content_article{
     font-family: sans-serif;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.4;
+}
+.button_article{
+  text-decoration: none;
+  padding: 15px;
+  color: white;
+  background-color: rgb(67, 133, 245);
+  border-radius: 10px;
+  margin-right: -2300px;
+  font-size: 18px;
+  transition: transform 1s ease;
+}
+.button_article:hover{
+  background-color: rgb(240, 84, 84);
 }
 
-
+.container_title_article{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 #button {
     display: inline-block;
     background-color: #FF9800;
@@ -50,3 +70,18 @@
     visibility: visible;
   }
   
+  .move_title_article{
+    transform: translate(900px, 0);
+}
+.move_button_article{
+  transform: translate(-700px, 0);
+}
+
+@media (max-width: 500px) {
+.article_title{
+  font-size: 2em;
+}
+.button_article{
+  padding: 7px;
+}
+}

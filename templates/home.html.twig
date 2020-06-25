@@ -4,16 +4,17 @@
 
 {% block body %}
 
-<div>
 <h1 id="home_title">
   <span class="blue">L</span><span class="red">e</span><span class="yellow">w</span><span class="blue">i</span><span class="green">k</span><span class="red">i</span>
 </h1>
-</h1>
     <form action="{{ path('search') }}" class="bar" method="post">
-    <div class="fa fa-search"></div>
+      <div class="fa fa-search"></div>
       <input class="search_bar" type="text" maxlength="100" name="search">
       <input type="hidden" name="email" value="">
     </form>
-</div>
 
+  {% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+  {% endblock %}
 {% endblock %}

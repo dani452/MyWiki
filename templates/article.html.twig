@@ -4,14 +4,17 @@
 
 {% block body %}
 
-<div>
-    <h1 class="article_title"><span class="blue">L</span><span class="red">e</span><span class="yellow">w</span><span class="blue">i</span><span class="green">k</span><span class="red">i</span></h1>
-      <div class="content_article">
-        <a id="button"></a>
-        <a href="{{ path('home') }}" class="btn btn-info offset-11" role="button">Retour</a>
-        {{ content|raw }}
-      </div>
-</div>
+
+  <div class="container_title_article">
+    <h1 class="article_title"><span class="blue">L</span><span class="red">e</span><span class="yellow">w</span><span class="blue">i</span><span class="green">k</span><span class="red">i</span>
+    </h1>
+    <a href="{{ path('home') }}" class="button_article" role="button">Retour</a>
+  </div>
+  <div class="content_article">
+    <a id="button"></a>
+    {{ content|raw }}
+  </div>
+
 
   {% block javascripts %}
     {{ parent() }}

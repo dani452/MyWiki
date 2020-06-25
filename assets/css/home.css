@@ -1,10 +1,11 @@
 #home_title{
     font-family: "Palatino Linotype P";
-    margin-top:200px;
+    margin-top:-100px;
     margin-bottom:60px;
     font-size: 128px;
     text-align: center;
     line-height: 50%;
+    transition: transform 1s ease;
 }
 .blue {
     color: #4385f5;
@@ -25,7 +26,7 @@ color: #109d59;
     display:flex;
     justify-content: start;
     align-items: center;
-    margin:0 auto;
+    margin:250px auto;
     width:575px;
     border-radius:30px;
     border:1px solid #dcdcdc;
@@ -53,4 +54,8 @@ color: #109d59;
     width: 20px !important;
     margin: 10px;
     color: rgb(154, 160, 166);
+}
+
+.move_title{
+    transform: translate(0px, 200px);
 }
