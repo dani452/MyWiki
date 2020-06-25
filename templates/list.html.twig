@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lewiki liste d'article{% endblock %}
+
+{% block body %}
+
+
+  <div class="container_title_article">
+    <h1 class="article_title"><span class="blue">L</span><span class="red">e</span><span class="yellow">w</span><span class="blue">i</span><span class="green">k</span><span class="red">i</span>
+    </h1>
+    <a href="{{ path('home') }}" class="button_article" role="button">Retour</a>
+  </div>
+  <div class="content_article">
+    <a id="button"></a>
+    {% for titles in titles %}
+    {{ titles|raw }}<br>
+    {% endfor %}
+    {# {% for content in content %}
+    {{ content|raw }}<br><br>
+    {% endfor %} #}
+    
+  </div>
+
+
+  {% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('list') }}
+  {% endblock %}
+
+{% endblock %}
