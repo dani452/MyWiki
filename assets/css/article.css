@@ -9,6 +9,7 @@ p{
     margin-bottom: 0px;
     margin-left: -2500px;
     transition: transform 1s ease;
+    
 }
 .content_article{
     font-family: sans-serif;
@@ -102,27 +103,51 @@ p{
     display: table;
     margin-left: 20px;
     padding: 7px;
-    border: 1px solid rgb(51, 49, 49);
-    width: 294px;
+    border: 1px solid rgb(167, 154, 154);
+    max-width: 400px;
   }
 
   .toc_niveau_2{
     display: table;
   }
   .toc{
-    border: 1px solid black;
-    width: 320px;
+    border: 1px solid rgb(167, 154, 154);
+    background-color: white;
+    width: fit-content;
   }
-  .ul {
+  ul {
     padding: 7px;
   }
-  .li {
+  li {
     list-style-type: none;
     list-style-image: none;
     text-decoration: none;
   }
+  .toctext{
+    color: rgb(63, 54, 54);
+    text-decoration: inherit;
+  }
+  .tocnumber{
+    color: rgb(63, 54, 54);
+    text-decoration: inherit;
+  }
   .navbox{
     width: 100%;
+  }
+  .thumb.tright:hover{
+    transform: scale(2);
+    transform-origin: right;
+    background-color: #fff;
+    border: 0.5px solid rgb(167, 154, 154);
+    font-size: 10px;
+    box-shadow: 0 0 5px rgba(33,33,33,.2);
+  }
+  .thumb.tleft:hover{
+    transform: scale(2);
+    transform-origin: left;
+    background-color: #fff;
+    border: 0.5px solid rgb(167, 154, 154);
+    font-size: 10px;
   }
 
 @media (max-width: 500px) {

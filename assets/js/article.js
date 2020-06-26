@@ -40,10 +40,9 @@ $(function() {
   $('.button_article').addClass('move_button_article');
 });
 
-
 jQuery( document ).ready(function() {
-  jQuery('.tright').attr('data-aos', 'fade-left');
+  jQuery('.tright').attr('data-aos', 'fade-in');
 });
 jQuery( document ).ready(function() {
-  jQuery('.tleft').attr('data-aos', 'fade-right');
+  jQuery('.tleft').attr('data-aos', 'fade-in');
 });

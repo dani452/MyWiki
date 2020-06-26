@@ -9,18 +9,22 @@
 }
 .blue {
     color: #4385f5;
+    text-shadow: 0 0 3px rgba(33,33,33,.2);
 }
 
 .red {
 color: #dc4437;
+text-shadow: 0 0 3px rgba(33,33,33,.2);
 }
 
 .yellow {
 color: #f5b400;
+text-shadow: 0 0 3px rgba(33,33,33,.2);
 }
 
 .green {
 color: #109d59;
+text-shadow: 0 0 3px rgba(33,33,33,.2);
 }
 .bar{
     display:flex;
