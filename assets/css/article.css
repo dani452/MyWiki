@@ -15,7 +15,7 @@ p{
     font-size: 18px;
     line-height: 1.4;
 }
-.edit_article_remove{
+.mw-editsection{
   display: none;
 }
 .button_article{
@@ -81,6 +81,22 @@ p{
     transform: translate(-700px, 0);
   }
 
+  h2{
+    text-align: center;
+  }
+
+  .tright{
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .tleft{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
   .table_info{
     float: right;
     display: table;
@@ -90,20 +106,23 @@ p{
     width: 294px;
   }
 
-  .toc_niveau_2_article{
+  .toc_niveau_2{
     display: table;
   }
-  .toc_article{
+  .toc{
     border: 1px solid black;
     width: 320px;
   }
-  .ul_article {
+  .ul {
     padding: 7px;
   }
-  .li_article {
+  .li {
     list-style-type: none;
     list-style-image: none;
     text-decoration: none;
+  }
+  .navbox{
+    width: 100%;
   }
 
 @media (max-width: 500px) {
