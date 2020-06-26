@@ -1,4 +1,4 @@
-$('.mw-editsection').css("display", "none");
+$('.mw-editsection').addClass('edit_article_remove');
 
 $(document).ready(function() {
   $(".infobox_v2 a").removeAttr("href");
@@ -6,11 +6,7 @@ $(document).ready(function() {
   $(".bandeau-cell a").removeAttr("href");
 });
 
-document.querySelector('.mw-parser-output').style.display = "flex";
-document.querySelector('.mw-parser-output').style.flexDirection = "column";
-document.querySelector('.mw-parser-output').style.marginTop = "50px";
-
-$('p').css("textAlign", "justify");
+$('.infobox_v2').addClass('table_info');
 
 var titles = document.querySelectorAll('h2');
 var i;
@@ -18,13 +14,28 @@ for (i =0; i< titles.length; i++){
     titles[i].style.textAlign = "center";
 }
 
-var image_article = document.getElementsByClassName("thumbimage");
+var image_article = document.getElementsByClassName("thumb tright");
 var i;
 for (i = 0; i < image_article.length; i++) {
-  image_article[i].style.width = "200%";
-  image_article[i].style.height = "auto";
+  image_article[i].style.float = "right";
+  image_article[i].style.marginLeft = "20px";
 }
 
+var image_article = document.getElementsByClassName("thumb tleft");
+var i;
+for (i = 0; i < image_article.length; i++) {
+  image_article[i].style.float = "left";
+  image_article[i].style.marginRight = "20px";
+}
+
+$('.toc_niveau_2').addClass('toc_niveau_2_article');
+$('.toc').addClass('toc_article');
+$('ul').addClass('ul_article');
+$('li').addClass('li_article');
+
+$('.image').removeAttr('href');
+
+$('.navbox').css("width", "100%");
 var btn = $('#button');
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
