@@ -15,10 +15,7 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
-$(function() {
-  $('.article_title').addClass('move_title_article');
-  $('.button_article').addClass('move_button_article');
-});
-
-
+$('h3').css('marginBottom', '0px');
+$('h3 a').css('textDecoration', 'none');
+$('h3 a').css('color', 'rgb(50, 50, 50)');
 

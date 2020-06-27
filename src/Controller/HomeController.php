@@ -36,7 +36,7 @@ class HomeController extends AbstractController
                         foreach($data->query->search as $r){
                             
                             array_push($titles, "<h3><a href=/wikiList/".$r->pageid.">".$r->title."</a></h3>");
-                            array_push($titles, $r ->snippet);
+                            // array_push($titles, $r ->snippet);
                         }
 
                 } else {

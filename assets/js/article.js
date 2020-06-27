@@ -5,6 +5,16 @@ import 'aos/dist/aos.css';
      });
 AOS.init({ duration: 500 });
 
+// $(window).scroll(function(){
+//   if ($(window).scrollTop() >= 0) {
+//       $('.nav_title').addClass('fixed-header');
+//       $('.nav_title div').addClass('visible-title');
+//   }
+//   else {
+//       $('.nav_title').removeClass('fixed-header');
+//       $('.nav_title div').removeClass('visible-title');
+//   }
+// });
 
 $(document).ready(function() {
   $(".infobox_v2 a").removeAttr("href");
@@ -35,14 +45,18 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
-$(function() {
-  $('.article_title').addClass('move_title_article');
-  $('.button_article').addClass('move_button_article');
-});
-
 jQuery( document ).ready(function() {
   jQuery('.tright').attr('data-aos', 'fade-in');
 });
 jQuery( document ).ready(function() {
   jQuery('.tleft').attr('data-aos', 'fade-in');
 });
+
+
+$(function() {
+  $(window).resize(function() {
+      var sW = $(window).width();
+      $('img').css('maxWidth', sW + 'px');
+  });        
+});
+

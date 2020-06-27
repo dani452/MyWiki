@@ -1,19 +1,41 @@
 p{
   text-align: justify;
 }
+
+.header_title {
+  height: 150px;
+  z-index: 10;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+}
+.nav_title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  background: #292f36;
+  position: fixed;
+  z-index: 10;
+}
+.visible-title {
+  visibility: visible;
+}
+
 .article_title{
     font-family: "Palatino Linotype P";
     text-align: center;
-    font-size: 5em;
+    font-size: 3em;
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: -2500px;
-    transition: transform 1s ease;
     
 }
 .content_article{
     font-family: sans-serif;
-    font-size: 18px;
     line-height: 1.4;
 }
 .mw-editsection{
@@ -21,22 +43,15 @@ p{
 }
 .button_article{
   text-decoration: none;
-  padding: 15px;
+  padding: 7px;
   color: white;
   background-color: rgb(67, 133, 245);
   border-radius: 10px;
-  margin-right: -2300px;
-  font-size: 18px;
-  transition: transform 1s ease;
 }
 .button_article:hover{
   background-color: rgb(240, 84, 84);
 }
-.container_title_article{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+
 #button {
     display: inline-block;
     background-color: #FF9800;
@@ -59,7 +74,6 @@ p{
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
-    font-size: 2em;
     line-height: 50px;
     color: #fff;
   }
@@ -73,13 +87,6 @@ p{
   #button.show {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .move_title_article{
-    transform: translate(900px, 0);
-  }
-  .move_button_article{
-    transform: translate(-700px, 0);
   }
 
   h2{
@@ -112,8 +119,7 @@ p{
   }
   .toc{
     border: 1px solid rgb(167, 154, 154);
-    background-color: white;
-    width: fit-content;
+    width: max-content;
   }
   ul {
     padding: 7px;
@@ -139,22 +145,58 @@ p{
     transform-origin: right;
     background-color: #fff;
     border: 0.5px solid rgb(167, 154, 154);
-    font-size: 10px;
     box-shadow: 0 0 5px rgba(33,33,33,.2);
+    z-index: 20;
   }
   .thumb.tleft:hover{
     transform: scale(2);
     transform-origin: left;
     background-color: #fff;
     border: 0.5px solid rgb(167, 154, 154);
-    font-size: 10px;
+    z-index: 20;
+  }
+
+  .thumbinner{
+    width: min-content !important;
   }
 
 @media (max-width: 500px) {
-.article_title{
-  font-size: 2em;
-}
+
 .button_article{
   padding: 7px;
 }
+.header_title{
+  height: 60px;
+}
+.nav_title{
+  height: 50px;
+}
+#home_title {
+  font-size: 75px;
+}
+.table_info{
+  width: 100%;
+}
+.bar{
+  width: 95%;
+}
+.toc_niveau_2{
+  width: 100%;
+}
+.toc{
+  width: 100%;
+}
+.thumb.tright:hover{
+  transform: scale(1.3);
+}
+.thumb.tleft:hover{
+  transform: scale(1.3);
+}
+.wikitable {
+  display: none;
+}
+.navbox{
+  display: none;
+}
+
 }
