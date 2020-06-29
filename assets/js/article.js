@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
      $(function() {
           AOS.init();
      });
-AOS.init({ duration: 500 });
+AOS.init({ duration: 600 });
 
 // $(window).scroll(function(){
 //   if ($(window).scrollTop() >= 0) {

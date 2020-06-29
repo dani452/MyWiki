@@ -37,6 +37,8 @@ p{
 .content_article{
     font-family: sans-serif;
     line-height: 1.4;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .mw-editsection{
   display: none;
@@ -173,6 +175,9 @@ p{
 }
 #home_title {
   font-size: 75px;
+}
+table{
+  width:100%;
 }
 .table_info{
   width: 100%;
