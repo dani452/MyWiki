@@ -36,7 +36,6 @@ class HomeController extends AbstractController
                         foreach($data->query->search as $r){
                             
                             array_push($titles, "<h3><a href=/wikiList/".$r->pageid.">".$r->title."</a></h3>");
-                            // array_push($titles, $r ->snippet);
                         }
 
                 } else {
@@ -61,7 +60,7 @@ class HomeController extends AbstractController
                 
                 $api = "https://fr.wikipedia.org/w/api.php?action=parse&format=json&pageid=".$id."&prop=text&formatversion=2";
                 $api = str_replace(' ','%20',$api);
-
+               
                 if(($data = json_decode(@file_get_contents($api))) !== null){
                     
                     $content = $data->parse->text;
@@ -86,15 +85,13 @@ class HomeController extends AbstractController
         if($request->request->get('email') == ""){
             if($id != ""){
                 
-                $api = "https://fr.wikipedia.org/w/api.php?action=parse&section=0&format=json&prop=text&page=".ucwords($id);
+                $api = "https://fr.wikipedia.org/w/api.php?action=parse&formatversion=2&format=json&prop=text&page=".$id;
                 $api = str_replace(' ','%20',$api);
-
+               
                 if(($data = json_decode(@file_get_contents($api))) !== null){
-                    foreach($data->parse->text as $text){
-                        $content = $text;
-                    break;
-                    }
-                  
+                   
+                        $content = $data->parse->text;
+
                 } else {
                     echo 'No contents found';
                 }
